@@ -135,9 +135,9 @@ readme
 #### スキル
 
 - 学習し開発で使用した経験がある
-  - C#, typescript, javascript, react, html. css, vite, vitest, sql server
+  - C#, typescript, javascript, react, html. css, sql server
 - 触ったことがある
-  - python, ruby, java, nextjs
+  - python, ruby, java, nextjs, vite, vitest
 - その他
   - canva, git, github, codex, notion, obsidian
 
@@ -242,3 +242,5 @@ readme
 | 2026-10-26 | 工程1でTypeScript、AstroによるReactの静的HTML生成、GitHub Pagesを採用。ローカル開発環境の構築を開始 |
 
 | 2026-10-27 | スキルを開発経験・触ったことがある・その他の3区分に更新。SVGLのアイコンを使用。XMLは本人の指示で掲載対象から除外。トップは開発経験9項目のアイコンのみ、スキルページは全19項目のアイコンと技術名を表示 |
+
+| 2026-10-27 | ページ見出しと補助表示を英語に統一。本文原稿は日本語を維持。Vite・VitestをExploredへ移動し、Used in Projects 7件・Explored 6件・Tools & Platforms 6件とする |

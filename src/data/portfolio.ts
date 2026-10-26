@@ -36,11 +36,16 @@ export const usedSkills = [
   'react',
   'html',
   'css',
-  'vite',
-  'vitest',
   'sql server',
 ];
-export const touchedSkills = ['python', 'ruby', 'java', 'nextjs'];
+export const touchedSkills = [
+  'python',
+  'ruby',
+  'java',
+  'nextjs',
+  'vite',
+  'vitest',
+];
 export const otherSkills = [
   'canva',
   'git',
