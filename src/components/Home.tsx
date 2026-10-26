@@ -4,7 +4,6 @@ export default function Home({ base }: { base: string }) {
   return (
     <>
       <div className="intro">
-        <p className="eyebrow">HELLO, I'M</p>
         <h1>
           Ao<span aria-hidden="true">.</span>
         </h1>
