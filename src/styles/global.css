@@ -64,16 +64,25 @@
 }
 .site-footer {
   border-top: 1px solid #dfe5df;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 .site-footer nav {
   display: flex;
-  gap: 24px;
-  font-size: 13px;
+  gap: 16px;
+  align-items: center;
 }
-.site-footer small {
-  font-size: 11px;
-  color: #71817a;
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #51665b;
+}
+.social-link:hover {
+  color: #267965;
+  background: #eaf1eb;
 }
 .skip-link {
   position: absolute;
@@ -486,9 +495,6 @@
   }
   .articles-empty {
     padding: 90px 32px;
-  }
-  .site-footer small {
-    margin-left: auto;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
