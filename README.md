@@ -31,7 +31,16 @@ npm run preview
 - `src/styles/global.css`: Tailwind CSSと基本スタイル
 - `astro.config.mjs`: 静的出力、React、Tailwind CSS、公開URLの設定
 
-現在は工程1の動作確認用ページのみ。掲載原稿や実際の画面は工程2以降に実装する。
+工程4まで実装済み。トップ・経歴・プロジェクト・記事・スキルの5ページをスマートフォン・PCで表示できる。記事は「準備中」。
+
+掲載原稿は `src/data/portfolio.ts`、画面部品は `src/components/`、色と画面幅ごとの配置は `src/styles/global.css` で管理する。技術アイコンは独自の文字・記号表示、プロジェクト画像はCSSで作成した図案を使用し、外部画像は取得していない。
+
+```sh
+npm run format
+npm run format:check
+```
+
+コード整形にはPrettierとAstro用プラグインを使用する。公開・外部記事取得・OGP画像の作成は後続工程。
 
 ## 公開方針
 

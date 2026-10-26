@@ -1,6 +1,88 @@
 import type { ReactNode } from 'react';
-const symbols: Record<string,string> = {'C#':'C#',typescript:'TS',javascript:'JS',react:'⚛',html:'</>',css:'#',python:'Py',ruby:'◇'};
-export function SkillList({skills}:{skills:string[]}) {return <ul className="skill-list">{skills.map(name=><li key={name}><span className={'skill-symbol skill-'+name.replace('#','sharp')} aria-hidden="true">{symbols[name]}</span><span>{name}</span></li>)}</ul>}
-export function ProjectIcon(){return <div className="project-art" aria-hidden="true"><div className="project-art-symbol">§<span>_</span></div><span className="project-art-name">law_typing</span><span className="project-art-caption">LAW × TYPING</span></div>}
-export function CareerList({entries}:{entries:{date:string;title:string;detail?:string}[]}) {return <ol className="career-list">{entries.map(entry=><li key={entry.date}><time dateTime={entry.date.replace('.','-')}>{entry.date}</time><div><p className="career-title">{entry.title}</p>{entry.detail && <p className="career-detail">{entry.detail}</p>}</div></li>)}</ol>}
-export function OverviewCard({title,number,path,base,children}:{title:string;number:string;path:string;base:string;children:ReactNode}) {return <section className="overview-card"><div className="card-heading"><span className="section-number">{number}</span><h2><a href={base+path+'/'}>{title}<span className="card-chevron" aria-hidden="true">›</span></a></h2></div><div className="card-content">{children}</div></section>}
+const symbols: Record<string, string> = {
+  'C#': 'C#',
+  typescript: 'TS',
+  javascript: 'JS',
+  react: '⚛',
+  html: '</>',
+  css: '#',
+  python: 'Py',
+  ruby: '◇',
+};
+export function SkillList({ skills }: { skills: string[] }) {
+  return (
+    <ul className="skill-list">
+      {skills.map((name) => (
+        <li key={name}>
+          <span
+            className={'skill-symbol skill-' + name.replace('#', 'sharp')}
+            aria-hidden="true"
+          >
+            {symbols[name]}
+          </span>
+          <span>{name}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+export function ProjectIcon() {
+  return (
+    <div className="project-art" aria-hidden="true">
+      <div className="project-art-symbol">
+        §<span>_</span>
+      </div>
+      <span className="project-art-name">law_typing</span>
+      <span className="project-art-caption">LAW × TYPING</span>
+    </div>
+  );
+}
+export function CareerList({
+  entries,
+}: {
+  entries: { date: string; title: string; detail?: string }[];
+}) {
+  return (
+    <ol className="career-list">
+      {entries.map((entry) => (
+        <li key={entry.date}>
+          <time dateTime={entry.date.replace('.', '-')}>{entry.date}</time>
+          <div>
+            <p className="career-title">{entry.title}</p>
+            {entry.detail && <p className="career-detail">{entry.detail}</p>}
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
+}
+export function OverviewCard({
+  title,
+  number,
+  path,
+  base,
+  children,
+}: {
+  title: string;
+  number: string;
+  path: string;
+  base: string;
+  children: ReactNode;
+}) {
+  return (
+    <section className="overview-card">
+      <div className="card-heading">
+        <span className="section-number">{number}</span>
+        <h2>
+          <a href={base + path + '/'}>
+            {title}
+            <span className="card-chevron" aria-hidden="true">
+              ›
+            </span>
+          </a>
+        </h2>
+      </div>
+      <div className="card-content">{children}</div>
+    </section>
+  );
+}
