@@ -1,5 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const base = import.meta.env.BASE_URL;
+import Home from '../components/Home';
 ---
-<Layout><h1 class="page-title">Ao</h1><nav aria-label="ページ一覧">{[['career','経歴'],['projects','プロジェクト'],['articles','記事'],['skills','スキル']].map(([path,title]) => <p><a href={base + path + '/'}>{title} ›</a></p>)}</nav></Layout>
+<Layout><Home base={import.meta.env.BASE_URL} /></Layout>
