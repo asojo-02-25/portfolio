@@ -1,0 +1,26 @@
+---
+import SetupPreview from '../components/SetupPreview';
+import '../styles/global.css';
+
+const title = 'Ao | Portfolio';
+const description = 'Aoのポートフォリオサイト。';
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <SetupPreview />
+  </body>
+</html>
