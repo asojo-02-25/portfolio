@@ -9,10 +9,10 @@ export default function Projects() {
         <p className="detail-copy">{project.description}</p>
         <div className="project-links">
           <a href={project.source}>
-            ソースコード <span aria-hidden="true">↗</span>
+            Source Code <span aria-hidden="true">↗</span>
           </a>
           <a href={project.url}>
-            サイトを見る <span aria-hidden="true">↗</span>
+            Visit Website <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>

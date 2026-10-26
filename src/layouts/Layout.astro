@@ -23,7 +23,7 @@ const fullTitle = title ? title + ' | Ao' : 'Ao | Portfolio';
   </head>
   <body class="antialiased">
     <a class="skip-link" href="#main">
-      本文へ移動
+      Skip to content
     </a>
     <header class="site-header">
       <a class="brand" href={base}>
@@ -38,7 +38,7 @@ const fullTitle = title ? title + ' | Ao' : 'Ao | Portfolio';
       {title && (
         <>
           <a class="back-link" href={base}>
-            ‹ トップに戻る
+            ‹ Back to Home
           </a>
           <h1 class="page-title">{title}</h1>
         </>
@@ -46,7 +46,7 @@ const fullTitle = title ? title + ' | Ao' : 'Ao | Portfolio';
       <slot />
     </main>
     <footer class="site-footer">
-      <nav aria-label="関連リンク">
+      <nav aria-label="Social links">
         <a
           href="https://github.com/asojo-02-25"
           aria-label="GitHub"

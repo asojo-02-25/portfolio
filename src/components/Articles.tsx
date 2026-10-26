@@ -4,7 +4,7 @@ export default function Articles() {
       <span className="empty-icon" aria-hidden="true">
         ✎
       </span>
-      <h2 id="article-status">準備中</h2>
+      <h2 id="article-status">Coming Soon</h2>
     </section>
   );
 }
