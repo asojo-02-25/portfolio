@@ -53,7 +53,7 @@
   margin: auto;
 }
 .page-title {
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 700;
   letter-spacing: -1px;
   margin: 24px 0 36px;
@@ -136,7 +136,7 @@
   margin-bottom: 22px;
 }
 .card-heading h2 {
-  font-size: 21px;
+  font-size: 24px;
   font-weight: 650;
   margin-top: 8px;
 }
@@ -341,7 +341,7 @@
   border-radius: 16px;
 }
 .skill-group h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.8;
   margin-bottom: 30px;
@@ -389,7 +389,7 @@
     margin: 0;
   }
   .card-heading h2 {
-    font-size: 23px;
+    font-size: 28px;
   }
   .card-chevron {
     right: 20px;
@@ -414,7 +414,7 @@
     min-height: 190px;
   }
   .page-title {
-    font-size: 38px;
+    font-size: 44px;
     margin: 30px 0 48px;
   }
   .detail-career .career-list {
@@ -462,7 +462,7 @@
     max-width: 720px;
   }
   .skill-group h2 {
-    font-size: 18px;
+    font-size: 24px;
   }
   .articles-empty {
     padding: 90px 32px;
