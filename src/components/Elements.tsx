@@ -5,9 +5,20 @@ const skillIcons: Record<string, string> = {
   javascript: 'javascript',
   react: 'react',
   html: 'html5',
-  css: 'css3',
+  css: 'css-new',
+  vite: 'vite',
+  vitest: 'vitest',
+  'sql server': 'microsoft-sql-server',
   python: 'python',
   ruby: 'ruby',
+  java: 'java',
+  nextjs: 'next-js',
+  canva: 'canva',
+  git: 'git',
+  github: 'github',
+  codex: 'codex',
+  notion: 'notion',
+  obsidian: 'obsidian',
 };
 export function SkillList({
   skills,
@@ -22,7 +33,7 @@ export function SkillList({
         <li key={name}>
           <img
             className="skill-symbol"
-            src={`${import.meta.env.BASE_URL}icons/devicon/${skillIcons[name]}.svg`}
+            src={`${import.meta.env.BASE_URL}icons/svgl/${skillIcons[name]}.svg`}
             width="44"
             height="44"
             alt={showLabels ? '' : name}

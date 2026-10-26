@@ -1,6 +1,6 @@
 # ポートフォリオサイト 要件定義書
 
-最終更新日: 2026-10-26
+最終更新日: 2026-10-27
 
 本書は、対話で合意した内容を継続して記録する。確定事項・提案・未確定事項を区別し、要件変更時に更新する。
 
@@ -135,9 +135,11 @@ readme
 #### スキル
 
 - 学習し開発で使用した経験がある
-  - C#, typescript, javascript, react, html. css
+  - C#, typescript, javascript, react, html. css, vite, vitest, sql server
 - 触ったことがある
-  - python, ruby
+  - python, ruby, java, nextjs
+- その他
+  - canva, git, github, codex, notion, obsidian
 
 #### 記事
 
@@ -238,3 +240,5 @@ readme
 | 2026-10-26 | 各詳細ページの原稿と、プロジェクトの外部リンク・記事の将来の一覧形式・経験区分ごとのスキルアイコン配置を確認。draw.ioにスマートフォン・PC版の構成案を追加 |
 | 2026-10-26 | 静的サイト・React・Tailwind CSSを採用。公開先をGitHub PagesまたはVercelで検討し、Zenn・Qiitaからの記事取り込みを検討開始 |
 | 2026-10-26 | 工程1でTypeScript、AstroによるReactの静的HTML生成、GitHub Pagesを採用。ローカル開発環境の構築を開始 |
+
+| 2026-10-27 | スキルを開発経験・触ったことがある・その他の3区分に更新。SVGLのアイコンを使用。XMLは本人の指示で掲載対象から除外。トップは開発経験9項目のアイコンのみ、スキルページは全19項目のアイコンと技術名を表示 |

@@ -33,7 +33,7 @@ npm run preview
 
 工程4まで実装済み。トップ・経歴・プロジェクト・記事・スキルの5ページをスマートフォン・PCで表示できる。記事は「準備中」。
 
-掲載原稿は `src/data/portfolio.ts`、画面部品は `src/components/`、色と画面幅ごとの配置は `src/styles/global.css` で管理する。技術アイコンはDevicon 2.18.0のSVGを `public/icons/devicon/` に保存して使用する（同フォルダーに出典・ライセンスを収録）。トップはアイコンのみ、スキルページはアイコンと技術名を表示する。プロジェクト画像はCSSで作成した図案を使用する。
+掲載原稿は `src/data/portfolio.ts`、画面部品は `src/components/`、色と画面幅ごとの配置は `src/styles/global.css` で管理する。技術アイコンはSVGLのSVGを `public/icons/svgl/` に保存して使用する（同フォルダーに取得元・ライセンスを収録）。トップはアイコンのみ、スキルページはアイコンと技術名を3分類で表示する。プロジェクト画像はCSSで作成した図案を使用する。
 
 ```sh
 npm run format

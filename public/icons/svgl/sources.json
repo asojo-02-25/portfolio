@@ -1,0 +1,116 @@
+[
+  {
+    "title": "C#",
+    "file": "csharp.svg",
+    "source": "https://svgl.app/library/csharp.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "TypeScript",
+    "file": "typescript.svg",
+    "source": "https://svgl.app/library/typescript.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "JavaScript",
+    "file": "javascript.svg",
+    "source": "https://svgl.app/library/javascript.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "React",
+    "file": "react.svg",
+    "source": "https://svgl.app/library/react_light.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "HTML5",
+    "file": "html5.svg",
+    "source": "https://svgl.app/library/html5.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "CSS (New)",
+    "file": "css-new.svg",
+    "source": "https://svgl.app/library/css.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Vite",
+    "file": "vite.svg",
+    "source": "https://svgl.app/library/vite.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Vitest",
+    "file": "vitest.svg",
+    "source": "https://svgl.app/library/vitest.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Microsoft SQL Server",
+    "file": "microsoft-sql-server.svg",
+    "source": "https://svgl.app/library/sql-server.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Python",
+    "file": "python.svg",
+    "source": "https://svgl.app/library/python.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Ruby",
+    "file": "ruby.svg",
+    "source": "https://svgl.app/library/ruby.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Java",
+    "file": "java.svg",
+    "source": "https://svgl.app/library/java.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Next.js",
+    "file": "next-js.svg",
+    "source": "https://svgl.app/library/nextjs_icon_dark.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Canva",
+    "file": "canva.svg",
+    "source": "https://svgl.app/library/canva.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Git",
+    "file": "git.svg",
+    "source": "https://svgl.app/library/git.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "GitHub",
+    "file": "github.svg",
+    "source": "https://svgl.app/library/github_light.svg",
+    "brandUrl": "https://brand.github.com/"
+  },
+  {
+    "title": "Codex",
+    "file": "codex.svg",
+    "source": "https://svgl.app/library/codex_light.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Notion",
+    "file": "notion.svg",
+    "source": "https://svgl.app/library/notion.svg",
+    "brandUrl": null
+  },
+  {
+    "title": "Obsidian",
+    "file": "obsidian.svg",
+    "source": "https://svgl.app/library/obsidian.svg",
+    "brandUrl": "https://obsidian.md/brand"
+  }
+]
