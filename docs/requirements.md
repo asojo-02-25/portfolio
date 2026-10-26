@@ -137,7 +137,7 @@ readme
 - 学習し開発で使用した経験がある
   - C#, typescript, javascript, react, html. css, sql server
 - 触ったことがある
-  - python, ruby, java, nextjs, vite, vitest
+  - python, ruby, java, nodejs, vite, vitest
 - その他
   - canva, git, github, codex, notion, obsidian
 

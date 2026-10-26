@@ -72,12 +72,6 @@
     "brandUrl": null
   },
   {
-    "title": "Next.js",
-    "file": "next-js.svg",
-    "source": "https://svgl.app/library/nextjs_icon_dark.svg",
-    "brandUrl": null
-  },
-  {
     "title": "Canva",
     "file": "canva.svg",
     "source": "https://svgl.app/library/canva.svg",
@@ -112,5 +106,11 @@
     "file": "obsidian.svg",
     "source": "https://svgl.app/library/obsidian.svg",
     "brandUrl": "https://obsidian.md/brand"
+  },
+  {
+    "title": "Node.js",
+    "file": "node-js.svg",
+    "source": "https://svgl.app/library/nodejs.svg",
+    "brandUrl": "https://nodejs.org/en/about/branding"
   }
 ]

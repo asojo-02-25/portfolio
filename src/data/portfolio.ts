@@ -42,7 +42,7 @@ export const touchedSkills = [
   'python',
   'ruby',
   'java',
-  'nextjs',
+  'nodejs',
   'vite',
   'vitest',
 ];

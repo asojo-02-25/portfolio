@@ -12,7 +12,7 @@ const skillIcons: Record<string, string> = {
   python: 'python',
   ruby: 'ruby',
   java: 'java',
-  nextjs: 'next-js',
+  nodejs: 'node-js',
   canva: 'canva',
   git: 'git',
   github: 'github',
