@@ -43,7 +43,7 @@ export default function Home({ base }: { base: string }) {
           <p className="card-intro">
             webアプリまわりの技術を中心に育てていきたいと思っています。
           </p>
-          <SkillList skills={usedSkills} />
+          <SkillList skills={usedSkills} showLabels={false} />
         </OverviewCard>
       </div>
     </>

@@ -1,26 +1,35 @@
 import type { ReactNode } from 'react';
-const symbols: Record<string, string> = {
-  'C#': 'C#',
-  typescript: 'TS',
-  javascript: 'JS',
-  react: '⚛',
-  html: '</>',
-  css: '#',
-  python: 'Py',
-  ruby: '◇',
+const skillIcons: Record<string, string> = {
+  'C#': 'csharp',
+  typescript: 'typescript',
+  javascript: 'javascript',
+  react: 'react',
+  html: 'html5',
+  css: 'css3',
+  python: 'python',
+  ruby: 'ruby',
 };
-export function SkillList({ skills }: { skills: string[] }) {
+export function SkillList({
+  skills,
+  showLabels = true,
+}: {
+  skills: string[];
+  showLabels?: boolean;
+}) {
   return (
-    <ul className="skill-list">
+    <ul className={showLabels ? 'skill-list' : 'skill-list skill-list-icons'}>
       {skills.map((name) => (
         <li key={name}>
-          <span
-            className={'skill-symbol skill-' + name.replace('#', 'sharp')}
-            aria-hidden="true"
-          >
-            {symbols[name]}
-          </span>
-          <span>{name}</span>
+          <img
+            className="skill-symbol"
+            src={`${import.meta.env.BASE_URL}icons/devicon/${skillIcons[name]}.svg`}
+            width="44"
+            height="44"
+            alt={showLabels ? '' : name}
+            title={name}
+            loading="lazy"
+          />
+          {showLabels && <span>{name}</span>}
         </li>
       ))}
     </ul>
