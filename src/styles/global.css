@@ -391,7 +391,9 @@
   margin-bottom: 30px;
 }
 .skill-group .skill-list {
-  gap: 28px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 28px 12px;
 }
 .skill-group .skill-symbol {
   width: 52px;
@@ -494,6 +496,10 @@
   }
   .skill-group h2 {
     font-size: 24px;
+  }
+  .skill-group .skill-list {
+    grid-template-columns: repeat(auto-fill, 80px);
+    gap: 28px 24px;
   }
   .articles-empty {
     padding: 90px 32px;
