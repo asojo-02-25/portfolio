@@ -549,6 +549,8 @@
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 80 / 27;
+  object-fit: contain;
   border-radius: 16px;
   pointer-events: none;
 }

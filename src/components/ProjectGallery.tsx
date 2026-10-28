@@ -38,7 +38,7 @@ export default function ProjectGallery() {
         now > resumeAt.current &&
         !document.hidden
       ) {
-        position += elapsed * 0.025;
+        position += elapsed * 0.05;
         if (position >= period * 2) position -= period;
         el.scrollLeft = position;
       } else {
