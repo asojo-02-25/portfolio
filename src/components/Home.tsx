@@ -26,7 +26,7 @@ export default function Home({ base }: { base: string }) {
           <p className="card-intro">
             司法試験受験生向けのタイピング練習サイトを公開しています。
           </p>
-          <ProjectGallery />
+          <ProjectGallery withinLink />
         </OverviewCard>
         <OverviewCard number="03" title="Articles" path="articles" base={base}>
           <p className="card-intro">技術や経験、学習したことなど。</p>

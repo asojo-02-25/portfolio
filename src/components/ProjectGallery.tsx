@@ -16,11 +16,17 @@ function loopWidth(el: HTMLDivElement) {
   );
 }
 
-export default function ProjectGallery() {
+export default function ProjectGallery({
+  withinLink = false,
+}: {
+  withinLink?: boolean;
+}) {
   const viewport = useRef<HTMLDivElement>(null);
   const interacting = useRef(false);
   const resumeAt = useRef(0);
   const drag = useRef<{ x: number; scroll: number } | null>(null);
+  const pointerStart = useRef<{ x: number; y: number } | null>(null);
+  const dragged = useRef(false);
 
   useEffect(() => {
     const el = viewport.current;
@@ -85,7 +91,10 @@ export default function ProjectGallery() {
         className="gallery-viewport"
         role="region"
         aria-label="law_typing screenshots. Scroll left or right to browse."
-        tabIndex={0}
+        tabIndex={withinLink ? undefined : 0}
+        onClick={(event) => {
+          if (dragged.current) event.preventDefault();
+        }}
         onScroll={normalize}
         onPointerEnter={delayResume}
         onPointerLeave={() => {
@@ -101,6 +110,8 @@ export default function ProjectGallery() {
         }}
         onWheel={delayResume}
         onPointerDown={(event) => {
+          pointerStart.current = { x: event.clientX, y: event.clientY };
+          dragged.current = false;
           interacting.current = true;
           if (event.pointerType !== 'mouse') return;
           event.currentTarget.setPointerCapture(event.pointerId);
@@ -110,16 +121,27 @@ export default function ProjectGallery() {
           };
         }}
         onPointerMove={(event) => {
+          if (
+            pointerStart.current &&
+            Math.hypot(
+              event.clientX - pointerStart.current.x,
+              event.clientY - pointerStart.current.y,
+            ) > 6
+          )
+            dragged.current = true;
           if (drag.current)
             event.currentTarget.scrollLeft =
               drag.current.scroll + drag.current.x - event.clientX;
         }}
         onPointerUp={() => {
+          pointerStart.current = null;
           drag.current = null;
           interacting.current = false;
           delayResume();
         }}
         onPointerCancel={() => {
+          pointerStart.current = null;
+          dragged.current = true;
           drag.current = null;
           interacting.current = false;
           delayResume();

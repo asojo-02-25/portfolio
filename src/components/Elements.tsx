@@ -79,19 +79,22 @@ export function OverviewCard({
   children: ReactNode;
 }) {
   return (
-    <section className="overview-card">
+    <a
+      className="overview-card"
+      href={base + path + '/'}
+      aria-label={title}
+      draggable={false}
+    >
       <div className="card-heading">
         <span className="section-number">{number}</span>
         <h2>
-          <a href={base + path + '/'}>
-            {title}
-            <span className="card-chevron" aria-hidden="true">
-              ›
-            </span>
-          </a>
+          {title}
+          <span className="card-chevron" aria-hidden="true">
+            ›
+          </span>
         </h2>
       </div>
       <div className="card-content">{children}</div>
-    </section>
+    </a>
   );
 }
