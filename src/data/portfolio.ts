@@ -4,7 +4,7 @@ export const careers = [
   {
     date: '2025.02',
     title: 'プログラミングをはじめる',
-    detail: 'rubyを書きはじめたり、基本情報を取ったりなど。',
+    detail: 'Rubyを書きはじめたり、基本情報を取ったりなど。',
   },
   { date: '2026.03', title: '神戸大学工学部応用化学科 卒業' },
   {
@@ -20,7 +20,7 @@ export const careers = [
   {
     date: '2026.06',
     title: '新日本ビジネスアソシエイツ (アルバイト)',
-    detail: 'C#やtypescriptを使用し、社内向けシステムの開発に携わっています。',
+    detail: 'C#やTypeScriptを使用し、社内向けシステムの開発に携わっています。',
   },
 ];
 export const project = {
@@ -32,26 +32,26 @@ export const project = {
 };
 export const usedSkills = [
   'C#',
-  'typescript',
-  'javascript',
-  'react',
-  'html',
-  'css',
-  'sql server',
+  'TypeScript',
+  'JavaScript',
+  'React',
+  'HTML',
+  'CSS',
+  'SQL Server',
 ];
 export const touchedSkills = [
-  'python',
-  'ruby',
-  'java',
-  'nodejs',
-  'vite',
-  'vitest',
+  'Python',
+  'Ruby',
+  'Java',
+  'Node.js',
+  'Vite',
+  'Vitest',
 ];
 export const otherSkills = [
-  'canva',
-  'git',
-  'github',
-  'codex',
-  'notion',
-  'obsidian',
+  'Canva',
+  'Git',
+  'GitHub',
+  'Codex',
+  'Notion',
+  'Obsidian',
 ];

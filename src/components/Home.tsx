@@ -36,7 +36,7 @@ export default function Home({ base }: { base: string }) {
         </OverviewCard>
         <OverviewCard number="04" title="Skills" path="skills" base={base}>
           <p className="card-intro">
-            webアプリまわりの技術を中心に育てていきたいと思っています。
+            Webアプリまわりの技術を中心に育てていきたいと思っています。
           </p>
           <SkillList skills={usedSkills} showLabels={false} />
         </OverviewCard>
