@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 const screenshots = [
   ['01-play', 'law_typing typing practice screen'],
@@ -21,11 +21,6 @@ export default function ProjectGallery() {
   const interacting = useRef(false);
   const resumeAt = useRef(0);
   const drag = useRef<{ x: number; scroll: number } | null>(null);
-  const [paused, setPaused] = useState(false);
-  const pausedRef = useRef(false);
-  useEffect(() => {
-    pausedRef.current = paused;
-  }, [paused]);
 
   useEffect(() => {
     const el = viewport.current;
@@ -41,7 +36,6 @@ export default function ProjectGallery() {
       const elapsed = previous ? Math.min(now - previous, 50) : 0;
       previous = now;
       if (
-        !pausedRef.current &&
         !reducedMotion.matches &&
         !interacting.current &&
         now > resumeAt.current &&
@@ -163,17 +157,6 @@ export default function ProjectGallery() {
           )),
         )}
       </div>
-      <button
-        className="gallery-toggle"
-        type="button"
-        aria-label={
-          paused ? 'Play automatic scrolling' : 'Pause automatic scrolling'
-        }
-        aria-pressed={paused}
-        onClick={() => setPaused(!paused)}
-      >
-        <span aria-hidden="true">{paused ? '▶' : 'Ⅱ'}</span>
-      </button>
     </div>
   );
 }
