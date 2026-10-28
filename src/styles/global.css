@@ -7,7 +7,7 @@
   --color-border: #dce2f0;
   --color-soft: #edf1fc;
   --color-line: #b8c5e9;
-  --color-hover: #fafbff;
+  --color-hover: #f1f4fd;
 }
 @layer base {
   html {
@@ -509,11 +509,11 @@
   .overview-card,
   .project-links a {
     transition:
-      background-color 0.16s,
-      border-color 0.16s;
+      background-color 0.08s ease-out,
+      border-color 0.08s ease-out;
   }
   .overview-card:hover {
-    border-color: var(--color-line);
+    border-color: #aabbe5;
     background: var(--color-hover);
   }
 }
