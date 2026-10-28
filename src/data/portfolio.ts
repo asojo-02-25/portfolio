@@ -15,6 +15,7 @@ export const careers = [
   {
     date: '2026.05',
     title: '司法試験受験生向けタイピング練習サイト law_typing を公開',
+    detail: '初めての個人開発で、コードも半分程度手書きして進めました。',
   },
   {
     date: '2026.06',
