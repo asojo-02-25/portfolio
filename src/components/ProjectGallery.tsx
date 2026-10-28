@@ -93,18 +93,14 @@ export default function ProjectGallery() {
         aria-label="law_typing screenshots. Scroll left or right to browse."
         tabIndex={0}
         onScroll={normalize}
-        onPointerEnter={() => {
-          interacting.current = true;
-        }}
+        onPointerEnter={delayResume}
         onPointerLeave={() => {
           if (!drag.current) {
             interacting.current = false;
             delayResume();
           }
         }}
-        onFocus={() => {
-          interacting.current = true;
-        }}
+        onFocus={delayResume}
         onBlur={() => {
           interacting.current = false;
           delayResume();
@@ -130,6 +126,11 @@ export default function ProjectGallery() {
           delayResume();
         }}
         onPointerCancel={() => {
+          drag.current = null;
+          interacting.current = false;
+          delayResume();
+        }}
+        onLostPointerCapture={() => {
           drag.current = null;
           interacting.current = false;
           delayResume();
