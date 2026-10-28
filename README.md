@@ -40,15 +40,17 @@ npm run format
 npm run format:check
 ```
 
-コード整形にはPrettierとAstro用プラグインを使用する。公開・外部記事取得・OGP画像の作成は後続工程。
+コード整形にはPrettierとAstro用プラグインを使用する。外部記事取得・OGP画像の作成は後続工程。
 
 ## 公開方針
 
-GitHub Pagesを採用。想定公開URLは `https://asojo-02-25.github.io/portfolio/`。まだ公開していない。
+GitHub Pagesを採用。公開URLは https://asojo-02-25.github.io/portfolio/ 。
 
 `astro.config.mjs` の `site` と `base` を公開先に合わせて設定している。内部リンクと公開素材は `import.meta.env.BASE_URL` を使って組み立て、`/portfolio/` 配下で動作するようにする。
 
-公開ワークフローとGitHub Pagesの有効化は工程6で行う。原稿のデータ化は工程3、記事取得・OGP画像は工程5で追加し、更新手順を追記する。
+GitHub PagesのSourceはGitHub Actionsを使用する。`.github/workflows/deploy.yml` がmainへのpush時にNode.js 24で依存関係を導入し、`npm run build`で型チェックと静的ビルドを実行して、`dist/`を公開する。Actions画面から手動実行も可能。
+
+更新時は原稿・画像・スタイルを変更し、`npm run build`で確認後、コミットしてmainへpushする。GitHub Actionsの「Deploy to GitHub Pages」が成功したら、公開URLで変更を確認する。記事取得・OGP画像は工程5の残件。
 
 ## 開発ドキュメント
 
