@@ -269,11 +269,13 @@
   margin-right: 8px;
 }
 .skill-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 24px;
 }
 .skill-list li {
+  flex: 0 0 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -379,7 +381,7 @@
   margin-bottom: 30px;
 }
 .skill-group .skill-list {
-  gap: 28px 8px;
+  gap: 28px 24px;
 }
 .skill-group .skill-symbol {
   width: 52px;
@@ -436,9 +438,6 @@
     margin: 0;
     padding-top: 3px;
   }
-  .card-content .skill-list {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
   .card-intro {
     font-size: 15px;
   }
@@ -488,10 +487,6 @@
   }
   .skill-group {
     padding: 36px;
-  }
-  .skill-group .skill-list {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    max-width: 720px;
   }
   .skill-group h2 {
     font-size: 24px;
