@@ -46,17 +46,6 @@ export function SkillList({
     </ul>
   );
 }
-export function ProjectIcon() {
-  return (
-    <div className="project-art" aria-hidden="true">
-      <div className="project-art-symbol">
-        §<span>_</span>
-      </div>
-      <span className="project-art-name">law_typing</span>
-      <span className="project-art-caption">LAW × TYPING</span>
-    </div>
-  );
-}
 export function CareerList({
   entries,
 }: {

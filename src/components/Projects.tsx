@@ -1,9 +1,9 @@
-import { ProjectIcon } from './Elements';
+import ProjectGallery from './ProjectGallery';
 import { project } from '../data/portfolio';
 export default function Projects() {
   return (
     <article className="project-detail">
-      <ProjectIcon />
+      <ProjectGallery />
       <div>
         <h2 className="detail-heading">{project.name}</h2>
         <p className="detail-copy">{project.description}</p>

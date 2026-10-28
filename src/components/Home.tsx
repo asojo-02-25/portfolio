@@ -1,5 +1,6 @@
 import { introduction, careers, usedSkills } from '../data/portfolio';
-import { OverviewCard, CareerList, ProjectIcon, SkillList } from './Elements';
+import { OverviewCard, CareerList, SkillList } from './Elements';
+import ProjectGallery from './ProjectGallery';
 export default function Home({ base }: { base: string }) {
   return (
     <>
@@ -25,7 +26,7 @@ export default function Home({ base }: { base: string }) {
           <p className="card-intro">
             司法試験受験生向けのタイピング練習サイトを公開しています。
           </p>
-          <ProjectIcon />
+          <ProjectGallery />
         </OverviewCard>
         <OverviewCard number="03" title="Articles" path="articles" base={base}>
           <p className="card-intro">技術や経験、学習したことなど。</p>
