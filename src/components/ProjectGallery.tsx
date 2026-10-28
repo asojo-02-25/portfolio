@@ -93,7 +93,8 @@ export default function ProjectGallery({
         aria-label="law_typing screenshots. Scroll left or right to browse."
         tabIndex={withinLink ? undefined : 0}
         onClick={(event) => {
-          if (dragged.current) event.preventDefault();
+          if (dragged.current && event.detail !== 0) event.preventDefault();
+          dragged.current = false;
         }}
         onScroll={normalize}
         onPointerEnter={delayResume}
