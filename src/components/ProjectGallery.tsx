@@ -7,6 +7,15 @@ const screenshots = [
   ['04-history', 'law_typing practice history'],
 ];
 
+function loopWidth(el: HTMLDivElement) {
+  const first = el.children[0]?.getBoundingClientRect();
+  const second = el.children[1]?.getBoundingClientRect();
+  return (
+    (first && second ? second.left - first.left : el.clientWidth / 2) *
+    screenshots.length
+  );
+}
+
 export default function ProjectGallery() {
   const viewport = useRef<HTMLDivElement>(null);
   const interacting = useRef(false);
@@ -24,15 +33,11 @@ export default function ProjectGallery() {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let frame = 0;
     let previous = 0;
-    let position =
-      (el.firstElementChild?.getBoundingClientRect().width ??
-        el.clientWidth / 2) * screenshots.length;
+    let position = loopWidth(el);
     el.scrollLeft = position;
 
     const tick = (now: number) => {
-      const period =
-        (el.firstElementChild?.getBoundingClientRect().width ??
-          el.clientWidth / 2) * screenshots.length;
+      const period = loopWidth(el);
       const elapsed = previous ? Math.min(now - previous, 50) : 0;
       previous = now;
       if (
@@ -51,9 +56,7 @@ export default function ProjectGallery() {
       frame = requestAnimationFrame(tick);
     };
     const resize = new ResizeObserver(() => {
-      position =
-        (el.firstElementChild?.getBoundingClientRect().width ??
-          el.clientWidth / 2) * screenshots.length;
+      position = loopWidth(el);
       el.scrollLeft = position;
     });
     resize.observe(el);
@@ -70,9 +73,7 @@ export default function ProjectGallery() {
   const normalize = () => {
     const el = viewport.current;
     if (!el) return;
-    const period =
-      (el.firstElementChild?.getBoundingClientRect().width ??
-        el.clientWidth / 2) * screenshots.length;
+    const period = loopWidth(el);
     if (!period) return;
     let shift = 0;
     if (el.scrollLeft < period / 2) shift = period;

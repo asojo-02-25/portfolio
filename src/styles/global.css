@@ -541,6 +541,7 @@
 }
 .gallery-slide {
   flex: 0 0 50%;
+  margin-right: 0.5rem;
   min-width: 0;
   user-select: none;
 }
