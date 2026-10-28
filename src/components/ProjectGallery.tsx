@@ -24,11 +24,15 @@ export default function ProjectGallery() {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let frame = 0;
     let previous = 0;
-    let position = el.clientWidth * screenshots.length;
+    let position =
+      (el.firstElementChild?.getBoundingClientRect().width ??
+        el.clientWidth / 2) * screenshots.length;
     el.scrollLeft = position;
 
     const tick = (now: number) => {
-      const period = el.clientWidth * screenshots.length;
+      const period =
+        (el.firstElementChild?.getBoundingClientRect().width ??
+          el.clientWidth / 2) * screenshots.length;
       const elapsed = previous ? Math.min(now - previous, 50) : 0;
       previous = now;
       if (
@@ -47,7 +51,9 @@ export default function ProjectGallery() {
       frame = requestAnimationFrame(tick);
     };
     const resize = new ResizeObserver(() => {
-      position = el.clientWidth * screenshots.length;
+      position =
+        (el.firstElementChild?.getBoundingClientRect().width ??
+          el.clientWidth / 2) * screenshots.length;
       el.scrollLeft = position;
     });
     resize.observe(el);
@@ -64,7 +70,9 @@ export default function ProjectGallery() {
   const normalize = () => {
     const el = viewport.current;
     if (!el) return;
-    const period = el.clientWidth * screenshots.length;
+    const period =
+      (el.firstElementChild?.getBoundingClientRect().width ??
+        el.clientWidth / 2) * screenshots.length;
     if (!period) return;
     let shift = 0;
     if (el.scrollLeft < period / 2) shift = period;
