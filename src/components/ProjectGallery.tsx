@@ -97,11 +97,11 @@ export default function ProjectGallery({
           dragged.current = false;
         }}
         onScroll={normalize}
-        onPointerEnter={delayResume}
+        onPointerEnter={withinLink ? undefined : delayResume}
         onPointerLeave={() => {
           if (!drag.current) {
             interacting.current = false;
-            delayResume();
+            if (!withinLink) delayResume();
           }
         }}
         onFocus={delayResume}
@@ -109,7 +109,14 @@ export default function ProjectGallery({
           interacting.current = false;
           delayResume();
         }}
-        onWheel={delayResume}
+        onWheel={(event) => {
+          if (
+            !withinLink ||
+            Math.abs(event.deltaX) > Math.abs(event.deltaY) ||
+            (event.shiftKey && event.deltaY !== 0)
+          )
+            delayResume();
+        }}
         onPointerDown={(event) => {
           pointerStart.current = { x: event.clientX, y: event.clientY };
           dragged.current = false;
