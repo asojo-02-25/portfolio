@@ -13,7 +13,7 @@ export default function Home({ base }: { base: string }) {
       <div className="overview-list">
         <OverviewCard number="01" title="Profile" path="career" base={base}>
           <p className="card-intro">
-            歴は浅いですが、その分日々学習に励んでいます。
+            コンピューターサイエンスやコーディングを中心に日々理解を深めています。
           </p>
           <CareerList
             entries={[careers[0], careers[4]].map(({ date, title }) => ({
